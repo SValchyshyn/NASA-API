@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerCrop"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="true" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:background="#33e04242"
+            android:adjustViewBounds="true"
+            android:orientation="horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:id="@+id/picture_title"
+                android:scrollHorizontally="false"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="15dp"
+                android:textSize="@dimen/abc_text_size_medium_material"
+                android:textColor="@color/abc_primary_text_material_dark"
+                android:layout_toStartOf="@+id/icon_download" />
+
+            <net.steamcrafted.materialiconlib.MaterialIconView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:materialIcon="message_text"
+                app:materialIconColor="#B3FAFAFA"
+                app:materialIconSize="38dp"
+                android:id="@+id/icon_description"
+                android:clickable="true"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true" />
+
+            <net.steamcrafted.materialiconlib.MaterialIconView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:materialIcon="image_album"
+                app:materialIconColor="#B3FAFAFA"
+                app:materialIconSize="38dp"
+                android:id="@+id/icon_download"
+                android:clickable="true"
+                android:layout_alignTop="@+id/icon_description"
+                android:layout_toStartOf="@+id/icon_description" />
+
+        </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+
+</RelativeLayout>
